@@ -1911,6 +1911,8 @@ MonoBehaviour:
   password: {fileID: 895248891}
   errorMessage: {fileID: 1254143717}
   signInText: {fileID: 390872427}
+  signInScreen: {fileID: 145928519}
+  signUpScreen: {fileID: 1178192041}
 --- !u!4 &1178192043
 Transform:
   m_ObjectHideFlags: 0
