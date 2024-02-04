@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "732374414085",
+    "project_id": "authentication-e63db",
+    "storage_bucket": "authentication-e63db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732374414085:android:4ffc6fef59fcf957787d6c",
+        "android_client_info": {
+          "package_name": "com.beste.auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG98dplo3JX-ItjSFFqyXL7Ym279QYorA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732374414085:android:a81d0fed252257dd787d6c",
+        "android_client_info": {
+          "package_name": "com.beste.authentication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG98dplo3JX-ItjSFFqyXL7Ym279QYorA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
