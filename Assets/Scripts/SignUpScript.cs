@@ -1,6 +1,7 @@
 using Firebase;
 using Firebase.Auth;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -10,6 +11,10 @@ public class SignUpScript : MonoBehaviour
     [SerializeField] private InputField password;
     [SerializeField] private Text errorMessage;
     [SerializeField] private Text signInText;
+
+    [SerializeField] private GameObject signInScreen;
+    [SerializeField] private GameObject signUpScreen;
+
 
     private FirebaseAuth auth;
 
@@ -34,6 +39,12 @@ public class SignUpScript : MonoBehaviour
         {
             Debug.LogError("Non-Firebase Exception: " + ex.ToString());
         }
+    }
+
+    public void OnSignInTextClick()
+    {
+        signInScreen.SetActive(true);
+        signUpScreen.SetActive(false);
     }
   
 }
