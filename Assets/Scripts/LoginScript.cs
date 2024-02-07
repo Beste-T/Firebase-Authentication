@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
-using Firebase.Auth;
-using Firebase;
 
 public class LoginScript : MonoBehaviour
 {
@@ -11,32 +8,23 @@ public class LoginScript : MonoBehaviour
     [SerializeField] private InputField password;
     [SerializeField] private Text errorMessage;
 
-
-    private FirebaseAuth auth;
-
+    private FirebaseManagerScript firebaseManager;
 
     void Start()
     {
-        auth = FirebaseAuth.DefaultInstance;
+        firebaseManager = GetComponent<FirebaseManagerScript>();
     }
-
-   
 
     public async void Login()
     {
         try
         {
-            Firebase.Auth.AuthResult result = await auth.SignInWithEmailAndPasswordAsync(email.text, password.text);
-            Debug.LogFormat("Firebase user created successfully: {0} ({1})", result.User.DisplayName, result.User.UserId);
+            await firebaseManager.LoginAsync(email.text, password.text);
+            // Additional UI logic or scene transitions can be added here
         }
-        catch (FirebaseException firebaseEx)
+        catch (Exception ex)
         {
-            errorMessage.text = "" + firebaseEx.Message;
-            Debug.LogError("Firebase Exception: " + firebaseEx.ErrorCode + " - " + firebaseEx.Message);
-        }
-        catch (System.Exception ex)
-        {
-            Debug.LogError("Non-Firebase Exception: " + ex.ToString());
+            errorMessage.text = "" + ex.Message;
         }
     }
 }

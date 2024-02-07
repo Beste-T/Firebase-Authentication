@@ -270,7 +270,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 1
@@ -365,7 +365,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 1
@@ -382,6 +382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 145928521}
   - component: {fileID: 145928520}
+  - component: {fileID: 145928522}
   m_Layer: 0
   m_Name: Sign In Screen
   m_TagString: Untagged
@@ -420,6 +421,18 @@ Transform:
   - {fileID: 647353770}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &145928522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145928519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49599b65a46c8fe4fa1226d04385c136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &301386888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,13 +1236,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 722126234}
   m_TextComponent: {fileID: 1050087852}
   m_Placeholder: {fileID: 1207723575}
-  m_ContentType: 0
+  m_ContentType: 6
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 7
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 5
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
@@ -1490,8 +1503,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 895248893}
   m_TextComponent: {fileID: 121391355}
   m_Placeholder: {fileID: 1594536893}
-  m_ContentType: 0
-  m_InputType: 0
+  m_ContentType: 7
+  m_InputType: 2
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
@@ -1853,13 +1866,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1146012568}
   m_TextComponent: {fileID: 427963041}
   m_Placeholder: {fileID: 320861506}
-  m_ContentType: 0
+  m_ContentType: 6
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 7
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 5
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
@@ -1888,6 +1901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1178192043}
   - component: {fileID: 1178192042}
+  - component: {fileID: 1178192044}
   m_Layer: 0
   m_Name: Sign Up Screen
   m_TagString: Untagged
@@ -1929,6 +1943,18 @@ Transform:
   - {fileID: 1801786658}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1178192044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178192041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49599b65a46c8fe4fa1226d04385c136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196558983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2920,8 +2946,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2133324117}
   m_TextComponent: {fileID: 41730691}
   m_Placeholder: {fileID: 1270702446}
-  m_ContentType: 0
-  m_InputType: 0
+  m_ContentType: 7
+  m_InputType: 2
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0

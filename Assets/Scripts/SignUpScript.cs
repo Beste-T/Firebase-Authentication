@@ -1,9 +1,6 @@
-using Firebase;
-using Firebase.Auth;
+using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
 
 public class SignUpScript : MonoBehaviour
 {
@@ -11,33 +8,26 @@ public class SignUpScript : MonoBehaviour
     [SerializeField] private InputField password;
     [SerializeField] private Text errorMessage;
     [SerializeField] private Text signInText;
-
     [SerializeField] private GameObject signInScreen;
     [SerializeField] private GameObject signUpScreen;
 
-
-    private FirebaseAuth auth;
+    private FirebaseManagerScript firebaseManager;
 
     void Start()
     {
-        auth = FirebaseAuth.DefaultInstance;
+        firebaseManager = GetComponent<FirebaseManagerScript>();
     }
 
     public async void SignUp()
     {
         try
         {
-            Firebase.Auth.AuthResult result = await auth.CreateUserWithEmailAndPasswordAsync(email.text, password.text);
-            Debug.LogFormat("Firebase user created successfully: {0} ({1})", result.User.DisplayName, result.User.UserId);
+            await firebaseManager.SignUpAsync(email.text, password.text);
+            // Additional UI logic or scene transitions can be added here
         }
-        catch (FirebaseException firebaseEx)
+        catch (Exception ex)
         {
-            errorMessage.text = "" + firebaseEx.Message;
-            Debug.LogError("Firebase Exception: " + firebaseEx.ErrorCode + " - " + firebaseEx.Message);
-        }
-        catch (System.Exception ex)
-        {
-            Debug.LogError("Non-Firebase Exception: " + ex.ToString());
+            errorMessage.text = "" + ex.Message;
         }
     }
 
@@ -46,5 +36,4 @@ public class SignUpScript : MonoBehaviour
         signInScreen.SetActive(true);
         signUpScreen.SetActive(false);
     }
-  
 }
